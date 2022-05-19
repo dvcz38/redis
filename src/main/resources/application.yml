@@ -1,0 +1,42 @@
+server:
+  port: 8080
+spring:
+  #数据库连接配置
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fordream?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: admin
+  redis:
+#    host: 35.220.129.218
+    host: 35.220.190.179
+    port: 6379
+    timeout: 20000
+    password: Abcd1234
+    #pool:
+    #max-active: 8
+    #min-idle: 0
+    #max-idle: 8
+    #max-wait: -1
+    #password:
+    #application:
+    #name: spring-boot-redis
+#mybatis的相关配置
+#mybatis:
+#  #mapper配置文件
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.icbcasia.eslog.model
+#  #开启驼峰命名
+#  configuration:
+#    map-underscore-to-camel-case: true
+
+#elasticSearch的相关配置
+elasticSearch:
+  host: 34.92.4.100
+  port: 9200
+  user: elasticsearch
+  password: Abcd1234
+  cluster-name: els001
+  client:
+    connectNum: 10
+    connectPerRoute: 50
